@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage{hyperref}
-
+\usepackage{termcal}
 
 \textwidth=7in
 \textheight=9.5in
@@ -11,6 +11,44 @@
 \hoffset  -.85in
 
 \pagestyle{empty}
+
+% Few useful commands (our classes always meet either on Monday and Wednesday 
+% or on Tuesday and Thursday)
+
+\newcommand{\MWClass}{%
+\calday[Monday]{\classday} % Monday
+\skipday % Tuesday (no class)
+\calday[Wednesday]{\classday} % Wednesday
+\skipday % Thursday (no class)
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\MTWHFClass}{%
+\calday[Monday]{\classday} % Monday
+\calday[Tuesday]{\classday} % Tuesday
+\calday[Wednesday]{\classday} % Wednesday
+\calday[Thursday]{\classday} % Thursday
+\calday[Friday]{\classday} % Friday
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\TRClass}{%
+\skipday % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\skipday % Wednesday (no class)
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{#2}
+}
+
+
+
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \begin{document}
@@ -139,6 +177,30 @@ Course Final \dotfill Month Day\\
 \end{minipage}
 \end{center}
 
+\paragraph*{Tentative Schedule:}
+\begin{center}
+\begin{calendar}{8/22/2016}{16} % Tri starts Aug 24 and lasts 16? weeks
+\setlength{\calboxdepth}{.4in}
+\MTWHFClass
+% schedule
+\caltexton{1}{1.1, 1.2 Review}
+\caltextnext{1.3, 1.4 Review}
+\caltextnext{2.1, 2.2 Linear Equations}
+% ... and so on
+
+% Holidays
+\Holiday{9/5/2016}{Labor Day}
+%\Holiday{3/8/2010}{Spring Break}
+% ... and so on
+
+%\options{11/10/2010}{\noclassday} % finals week
+%\options{4/27/2010}{\noclassday} % finals week
+%\options{4/28/2010}{\noclassday} % finals week
+%\options{4/29/2010}{\noclassday} % finals week
+%\options{4/30/2010}{\noclassday} % finals week
+\caltext{11/10/2010}{\textbf{Final Exam}}
+\end{calendar}
+\end{center}
 
 
 
