@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{termcal}
+
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\pagestyle{empty}
+
+% Few useful commands (our classes always meet either on Monday and Wednesday 
+% or on Tuesday and Thursday)
+
+\newcommand{\MWClass}{%
+\calday[Monday]{\classday} % Monday
+\skipday % Tuesday (no class)
+\calday[Wednesday]{\classday} % Wednesday
+\skipday % Thursday (no class)
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\MTWHFClass}{%
+\calday[Monday]{\classday} % Monday
+\calday[Tuesday]{\classday} % Tuesday
+\calday[Wednesday]{\classday} % Wednesday
+\calday[Thursday]{\classday} % Thursday
+\calday[Friday]{\classday} % Friday
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\TRClass}{%
+\skipday % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\skipday % Wednesday (no class)
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{#2}
+}
+
+%Renew commands so dates are bold and class numbers are not
+\renewcommand{\calprintdate}{%
+ \ifnewmonth\framebox{\textbf{\monthname\ \ordinaldate}}%
+  \else \textbf{\ordinaldate}\fi}
+\renewcommand{\calprintclass}{\scriptsize\theclassnum}
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{document}
+
+\begin{center}
+{\bf Calender - Tri 1 \ MATH 3 Honors \ Mr. Boyer \ \   Room:    
+}
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\arraystretch}{2}
+
+\vskip.25in
+\noindent\textbf{Instructor:} Justin Boyer, email: TBD, Phone: 555-5555, website: \url{https://sites.google.com/site/justinlboyer/}
+\vskip.25in
+\noindent\textbf{Office Hours:} Tuesday-Friday, 7:15-7:45 AM and by  appointment.\\
+
+%\footnotetext{Footnote text goes here.}
+
+The dates listed are tentative all are subject to change.
+
+\vskip.25in
+\noindent\textbf{Important Dates}:
+\begin{center} \begin{minipage}{5in}
+\begin{flushleft}
+%Drop Deadline \dotfill Month Day\\
+%Add Deadline \dotfill Month Day\\
+Midterm Exam \dotfill January 18\\
+Parent Teacher Conference \dotfill January 19 \\
+%Second Test  \dotfill Month Day\\
+%Third Test \dotfill Month Day\\
+Course Final \dotfill February 27\\
+Project Deadline/Presentations \dotfill February 28\\
+End of Second Trimester \dotfill March 2
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\paragraph*{Tentative Schedule:}
+\begin{center}
+\begin{calendar}{11/28/2016}{14} % Tri starts Aug 24 and lasts 16? weeks
+\setlength{\calboxdepth}{.1in}
+\setlength{\calwidth}{7in}
+\MTWHFClass
+% schedule
+\caltexton{1}{Disclosure and Rev. Factoring}
+\caltextnext{Rev. Quadratic Formula}
+
+% Holidays
+\Holiday{11/28/2016}{No School}
+\Holiday{1/2/2017}{No School}
+\Holiday{1/16/2017}{Martin Luther Kind Jr. Day}
+\Holiday{2/3/2017}{No School}
+\Holiday{2/20/2017}{No School}
+\Holiday{3/3/2017}{No School}
+
+%Important Dates
+\caltext{1/18/2017}{Midterm Exam}
+\caltext{1/19/2017}{Parent Teacher Conference}
+\caltext{2/27/2017}{Final Exam}
+\caltext{2/28/2017}{Project Deadline/Presentations}
+\caltext{3/2/2017}{End of Tri 2}
+
+%Skip Winter Break
+\Holiday{12/26/2016}{No School}
+\Holiday{12/27/2016}{No School}
+\Holiday{12/28/2016}{No School}
+\Holiday{12/29/2016}{No School}
+\Holiday{12/30/2016}{No School}
+\Holiday{12/31/2016}{No School}
+
+\end{calendar}
+\end{center}
+
+
+
+
+
+
+
+\end{document}
