@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{termcal}
+\usepackage{multicol}
+
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\pagestyle{empty}
+
+% Few useful commands (our classes always meet either on Monday and Wednesday 
+% or on Tuesday and Thursday)
+
+\newcommand{\MWClass}{%
+\calday[Monday]{\classday} % Monday
+\skipday % Tuesday (no class)
+\calday[Wednesday]{\classday} % Wednesday
+\skipday % Thursday (no class)
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\MTWHFClass}{%
+\calday[Monday]{\classday} % Monday
+\calday[Tuesday]{\classday} % Tuesday
+\calday[Wednesday]{\classday} % Wednesday
+\calday[Thursday]{\classday} % Thursday
+\calday[Friday]{\classday} % Friday
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\TRClass}{%
+\skipday % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\skipday % Wednesday (no class)
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{#2}
+}
+
+
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{document}
+
+\begin{center}
+{\bf Syllabus \ MATH \ \ Mr. Boyer  \ \   Room:    
+}
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+ 
+
+\renewcommand{\arraystretch}{2}
+
+\vskip.25in
+
+
+\begin{multicols}{2}
+\noindent\textbf{Instructor:} Justin Boyer, email: TBD, Phone: 555-5555, website: \url{https://sites.google.com/site/justinlboyer/}\\
+
+\noindent\textbf{Office Hours:} Tuesday-Friday, 7:15-7:45 AM and by  appointment.\\
+
+%\vskip.25in
+%\noindent\textbf{Textbook:}  Put your textbook information here.
+%
+%\vskip.25in
+%\noindent\textbf{Prerequisites:}%\footnotemark
+%A list of prerequisites.
+
+\noindent \textbf{Course Objectives}:  First and foremost the objective of this course is to bring out the mathematician in you.  It is my goal for you to leave this course identifying yourself as a mathematician.  This will benefit you throughout your life, by helping you destroy the barriers you create for yourself.
+
+
+%\footnotetext{Footnote text goes here.}
+
+
+
+%\noindent \textbf{Course Outline:} 
+%
+%\begin{center} \begin{minipage}{5in}
+%\begin{flushleft}
+%Chapter 1 \dotfill approx 3 days\\
+%Chapter 2 \dotfill approx 3 days\\
+%Chapter 3 \dotfill approx 2 1/2 days\\
+%First Exam  \dotfill 1 day\\
+%Chapter 4 \dotfill approx 2 days\\
+%Chapter 8 \dotfill approx 1 1/2 days\\
+%Chapter 9 \dotfill approx 1 1/2 days\\
+%Chapter 5 \dotfill approx 2 days\\
+%Second Exam \dotfill 1 day\\
+%Chapter 6 \dotfill approx 2 days \\
+%Chapter 7 \dotfill approx 1 days\\
+%Chapter 11 \dotfill approx 1 1/2 days\\
+%Chapter 12 \dotfill approx 2 days\\
+%Third Exam \dotfill 1 day\\
+%\end{flushleft}
+%\end{minipage}
+%\end{center}
+
+
+\noindent\textbf{Classroom Rules:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Be Honest:  When you make a mistake (either behaviorally or academically), take responsibility, and grow from the mistake. 
+%Be Respectful: You are to be respectful to yourself, classmates, and your teacher.\\
+
+\item Be Prepared: Come to class ready to learn with all the required materials.
+
+\item Follow Directions:  Listen to what is required and follow through on getting it accomplished.
+
+\item Follow School Rules: There is no exception for following school rules while you are in class.
+
+\end{itemize}
+
+\end{multicols}
+
+
+\noindent\textbf{Important Dates}:
+\begin{center} \begin{minipage}{5in}
+\begin{flushleft}
+Midterm \dotfill October 4\\
+Parent Teacher Conference \dotfill October 13 \\
+Course Final \dotfill November 17\\
+Project Deadline/Presentations \dotfill November 18\\
+End of First Trimester \dotfill November 22
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\subsubsection*{Grade Policy:} I grade based on mastery of standards.  This means that you (the student) are graded based on your level of proficiency of standards taken from the core curriculum as well as the standards I develop.  If you do not show me you have learned the standards you will not pass this class.   Each standard is graded on a scale $0-9$, each number represents a students level of proficiency:
+\begin{itemize}
+\setlength\itemsep{0em}
+\item A 9 is mastery.
+\item An 8 is mastery, however the student made a small mistake, likely with arithmetic, for example: $2+1=4$.
+\item A 7 is a conceptual misunderstanding.
+\item A 6 is a fundamental misunderstanding, the student likely needs to be retaught the material.
+\item 5 and below represents various levels of attempts but all neglect any understanding of the material involved.
+\end{itemize}
+
+\paragraph*{Mastery}
+If you have mastered the material and you continue to exhibit proficiency of the material you will earn extra credit in the class, a 10 for that specific standard. \textbf{Important: You must continue to display mastery in order to maintain a 10.}  In other words, if you have a 10, but then you forget/mess up/etc. the material, your 10 on that standard could become an 8 or lower.
+
+\paragraph*{Reteaching material}
+If $ \geq 80\%$ of the class is at an 8 or higher I will not reteach the material.  If $\geq 20\%$ of the class is at a 7 or below I will (at a minimum) do a quick review of the standard in question.  If at any point you are at a 7 or below and we have moved on, it is your responsibility to seek additional help, this may include coming to my office hours, peer tutoring, or online help.
+
+\paragraph*{Standards}
+I reserve the right to include any "standard'' I deem necessary to facilitate your development as mathematicians.  Including but not limited to the following standards:
+
+The student follows directions the first time.
+
+ The student completes all homework.
+
+ The student writes in a neat, organized manner.
+
+ The student shows sufficient work.
+
+ The student immediately begins the warm up upon entering the classroom.
+
+
+\noindent\textbf{Grading}: \textbf{Your grade will fluctuate during this class.  It is very probable that at some point you will have a grade that is not to your liking.}  The grades are very fluid and are a snapshot of your progress on any of the given standards at that moment.  Therefore it is important that you frequently check your grades to see what standards you should be focusing on.\\
+
+\textbf{Homework}  You are required to spend at least 25 minutes a night on homework.  It is your responsibility to ask questions in class regarding the homework so that you completely understand each standard the homework is addressing.
+
+\textbf{Project}  Each student will develop and research in an individual project which will span the entire trimester.  The project will culminate in a research paper and (time permitting) a presentation.  The grade earned will be based on a rubric, which will be handed out along with possible project topic list.
+
+\textbf{Quizzes} We will have at least one cumulative quiz each week.  During which I will asses your level on each of the standards covered by the quiz. 
+
+\textbf{Exams} There will be two exams each trimester.  The exams will be comprehensive.  Each problem will align with one or more standard, your updated grade for each standard will be based on the median score you receive on each standard.
+
+\paragraph*{Extra Help}:  Please take advantage of my office hours if you need additional help. Do not hesitate to come to class during office hours or by appointment to discuss a homework problem or any aspect of the course. You also may want to consider using one of the great online sources such as \url{https://www.ixl.com/math/} or \url{https://www.khanacademy.org/} 
+
+
+
+
+%\vskip.25in
+%\noindent\textbf{Homework}:  A Description of the homework policy.
+
+\vskip.25in
+\subsubsection*{School Guidelines}
+\paragraph*{Academic Honesty:}  As a Brighton High School student, you have agreed to abide by the
+School's academic honesty policy, and the Student Honor Code.
+Lack of knowledge of the academic honesty policy is not a
+reasonable explanation for a violation. Questions related to course assignments and the
+academic honesty policy should be directed to the instructor.
+
+\paragraph*{Brighton High School Attendance Policy}:  \url{http://brightonhigh.canyonsdistrict.org/docs/2015-16_BHS_Attendace_Policy.docx}
+Students are expected to attend classes regularly. A student who incurs an excessive
+number of absences will be required to attend a conference including the students guardians and possibly administration.
+
+
+%\paragraph*{Tentative Schedule:}
+%\begin{center}
+%\begin{calendar}{8/22/2016}{16} % Tri starts Aug 24 and lasts 16? weeks
+%\setlength{\calboxdepth}{.4in}
+%\MTWHFClass
+%% schedule
+%\caltexton{1}{1.1, 1.2 Review}
+%\caltextnext{1.3, 1.4 Review}
+%\caltextnext{2.1, 2.2 Linear Equations}
+%% ... and so on
+%
+%% Holidays
+%\Holiday{9/5/2016}{Labor Day}
+%%\Holiday{3/8/2010}{Spring Break}
+%% ... and so on
+%
+%%\options{11/10/2010}{\noclassday} % finals week
+%%\options{4/27/2010}{\noclassday} % finals week
+%%\options{4/28/2010}{\noclassday} % finals week
+%%\options{4/29/2010}{\noclassday} % finals week
+%%\options{4/30/2010}{\noclassday} % finals week
+%\caltext{11/10/2010}{\textbf{Final Exam}}
+%\end{calendar}
+%\end{center}
+
+
+
+
+
+
+
+\end{document}
